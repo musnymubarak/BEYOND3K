@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us – BEYOND3K LLC</title>
+  <meta name="description" content="Get in touch with BEYOND3K LLC. We're here to assist with all your construction and facility maintenance needs.">
+  <link rel="icon" type="image/png" href="assets/Beyond3K.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .contact-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 160px;
+      min-height: 100vh;
+    }
+    @media (max-width: 1024px) {
+      .contact-split { grid-template-columns: 1fr; }
+    }
+    .contact-info-col {
+      padding-right: 80px;
+      padding-bottom: 80px;
+    }
+    .contact-form-col {
+      border-left: 1px solid var(--border-color);
+      padding-left: 80px;
+      padding-bottom: 80px;
+    }
+    @media (max-width: 1024px) {
+      .contact-info-col { padding-right: 0; }
+      .contact-form-col { border-left: none; padding-left: 0; padding-top: 80px; border-top: 1px solid var(--border-color); }
+    }
+    .map-full {
+      width: 100%;
+      height: 600px;
+      position: relative;
+      margin-left: calc(-50vw + 50%);
+      margin-right: calc(-50vw + 50%);
+      filter: grayscale(1) contrast(1.2);
+    }
+    @media (max-width: 1024px) {
+      .map-full { height: 400px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BACKGROUND GRID LINES -->
+  <div class="grid-lines">
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        BYND<span>3K</span>
+      </a>
+      
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="general-construction.html" class="nav-link">General Construction</a>
+        <a href="facility-maintenance.html" class="nav-link">Maintenance</a>
+      </nav>
+
+      <div class="theme-toggle-wrap">
+        <a href="contact.html" class="btn-editorial" style="color: var(--accent); font-size: 0.75rem;">Contact Us</a>
+        <button class="theme-toggle" aria-label="Toggle Theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+        <button class="mobile-toggle" aria-label="Toggle Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="general-construction.html">General Construction</a>
+    <a href="facility-maintenance.html">Maintenance</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+
+  <!-- SPLIT CONTACT LAYOUT -->
+  <section class="container contact-split">
+    
+    <div class="contact-info-col">
+      <span class="eyebrow">Initiate Contact</span>
+      <h1 class="headline-mega" style="font-size: clamp(2.5rem, 12vw, 8rem); line-height: 0.85; margin-bottom: 60px;">
+        GET IN<br>
+        <span style="color: var(--accent);">TOUCH.</span>
+      </h1>
+      <p class="text-body-lg" style="margin-bottom: 80px; border-left: 2px solid var(--text-muted); padding-left: 24px;">
+        Our team at BEYOND3K Contractors is here to assist you with any inquiries or project needs. Reach out for reliable and unyielding professional execution.
+      </p>
+
+      <div style="display: flex; flex-direction: column; gap: 40px;">
+        <div>
+          <span class="eyebrow" style="margin-bottom: 8px;">Headquarters</span>
+          <p class="text-body-lg" style="font-size: 1.5rem; color: var(--text-primary);">
+            5257 Buckeystown Pike #282<br>Frederick MD 21703
+          </p>
+        </div>
+        <div>
+          <span class="eyebrow" style="margin-bottom: 8px;">Direct Line</span>
+          <p class="text-body-lg" style="font-size: 2rem; color: var(--text-primary); font-weight: 800; letter-spacing: -0.05em;">
+            +1 (240) 600-5011
+          </p>
+        </div>
+        <div>
+          <span class="eyebrow" style="margin-bottom: 8px;">Electronic Mail</span>
+          <p class="text-body-lg" style="font-size: 1.5rem; color: var(--text-primary);">
+            info@beyond3k.com
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MINIMALIST EDITORIAL FORM -->
+    <div class="contact-form-col">
+      <form>
+        <div class="form-ed-group">
+          <label class="form-ed-label">Full Name</label>
+          <input type="text" class="form-ed-input" placeholder="Architectural Entity">
+        </div>
+        
+        <div class="form-ed-group">
+          <label class="form-ed-label">Email Address</label>
+          <input type="email" class="form-ed-input" placeholder="entity@domain.com">
+        </div>
+
+        <div class="form-ed-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+          <div>
+            <label class="form-ed-label">Phone</label>
+            <input type="tel" class="form-ed-input" placeholder="+1 (000)">
+          </div>
+          <div>
+            <label class="form-ed-label">Service Required</label>
+            <select class="form-ed-input" style="appearance: none;">
+              <option value="general">Construction</option>
+              <option value="facility">Maintenance</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-ed-group" style="margin-top: 80px;">
+          <label class="form-ed-label">Project Details</label>
+          <input type="text" class="form-ed-input" placeholder="Define the scope...">
+        </div>
+
+        <button type="submit" class="btn-editorial" style="font-size: 1.5rem; margin-top: 40px;">
+          Submit Inquiry <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <div class="map-full">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3106.2!2d-77.4221!3d39.4142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c9d57a04f13a01%3A0x0!2sFrederick%2C%20MD!5e0!3m2!1sen!2sus!4v1698000000000!5m2!1sen!2sus"
+      width="100%" height="100%" style="border:0;"
+      allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <!-- ASYMMETRICAL FOOTER (Reused) -->
+  <footer class="footer-editorial" style="border-top: none;">
+    <div class="container footer-grid-ed">
+      <div>
+        <h2 class="footer-mega-text">Build<br>With Us.</h2>
+        <div style="font-weight: 700; color: var(--accent); margin-bottom: 16px;">CAGE: 9YUB3 | UEI: Q1QGTVS3NC29</div>
+        <p class="text-body-lg" style="font-size: 1rem; max-width: 300px;">
+          5257 Buckeystown Pike #282<br>Frederick MD 21703<br><br>
+          info@beyond3k.com<br>
+          +1 (240) 600-5011
+        </p>
+      </div>
+
+      <div>
+        <span class="eyebrow" style="margin-bottom: 40px;">Company</span>
+        <ul class="footer-links-ed">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <span class="eyebrow" style="margin-bottom: 40px;">Services</span>
+        <ul class="footer-links-ed">
+          <li><a href="general-construction.html">General Construction</a></li>
+          <li><a href="facility-maintenance.html">Facility Maintenance</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container" style="margin-top: 120px; border-top: 1px solid var(--border-color); padding-top: 24px; color: var(--text-muted); font-size: 0.875rem; display: flex; justify-content: space-between;">
+      <span>© 2026 BEYOND3K LLC.</span>
+      <span>Developed by Hashnate.</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

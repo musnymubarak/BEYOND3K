@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>General Construction – BEYOND3K LLC</title>
+  <meta name="description" content="BEYOND3K LLC provides comprehensive general construction services covering all aspects of construction.">
+  <link rel="icon" type="image/png" href="assets/Beyond3K.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .service-detail-hero {
+      padding: 200px 0 100px;
+    }
+    .grid-offset-desc {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 80px;
+      margin-top: 100px;
+      align-items: end;
+    }
+    @media (max-width: 1024px) {
+      .grid-offset-desc { grid-template-columns: 1fr; gap: 40px; }
+    }
+    .huge-image-bleed {
+      width: 100%;
+      height: 80vh;
+      min-height: 400px;
+      max-height: 800px;
+      position: relative;
+      margin-left: calc(-50vw + 50%);
+      margin-right: calc(-50vw + 50%);
+      margin-top: var(--space-20x);
+      margin-bottom: var(--space-20x);
+    }
+    @media (max-width: 1280px) {
+      .huge-image-bleed {
+        margin-left: calc(var(--space-6x) * -1);
+        margin-right: calc(var(--space-6x) * -1);
+        width: calc(100% + var(--space-6x) * 2);
+      }
+    }
+    @media (max-width: 1024px) {
+      .huge-image-bleed {
+        margin-left: calc(var(--space-3x) * -1);
+        margin-right: calc(var(--space-3x) * -1);
+        width: calc(100% + var(--space-3x) * 2);
+        height: 50vh;
+      }
+    }
+    .huge-image-bleed img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(0.2);
+    }
+    .service-detail-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      border-left: 2px solid var(--border-heavy);
+      padding-left: 32px;
+    }
+    .service-detail-list li {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .service-detail-list li span {
+      display: block;
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--text-secondary);
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BACKGROUND GRID LINES -->
+  <div class="grid-lines">
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        BYND<span>3K</span>
+      </a>
+      
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="general-construction.html" class="nav-link" style="color: var(--accent);">General Construction</a>
+        <a href="facility-maintenance.html" class="nav-link">Maintenance</a>
+      </nav>
+
+      <div class="theme-toggle-wrap">
+        <a href="contact.html" class="btn-editorial" style="color: inherit; font-size: 0.75rem;">Contact Us</a>
+        <button class="theme-toggle" aria-label="Toggle Theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+        <button class="mobile-toggle" aria-label="Toggle Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="general-construction.html">General Construction</a>
+    <a href="facility-maintenance.html">Maintenance</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+
+  <!-- MASSIVE DESCRIPTIVE HERO -->
+  <section class="service-detail-hero">
+    <div class="container">
+      <h1 class="headline-mega" style="font-size: clamp(2.5rem, 10vw, 10rem); line-height: 0.85;">
+        GENERAL<br>
+        <span style="color: var(--text-muted);">CONSTRUCTION.</span>
+      </h1>
+      
+      <div class="grid-offset-desc">
+        <div>
+          <span class="eyebrow" style="margin-bottom: 0;">Discipline Overview</span>
+        </div>
+        <div>
+          <p class="text-body-lg" style="font-size: 1.5rem; max-width: 800px; color: var(--text-primary);">
+            Comprehensive contracting services that covers all aspects of construction. From ground-up structural implementations to fine-grained exterior landscapes, we define space through unyielding quality.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMMERSIVE BLEED IMAGE -->
+  <div class="huge-image-bleed">
+    <img src="assets/building-concrete-house-scaled.jpg" alt="Construction Site">
+  </div>
+
+  <!-- BREAKDOWN GRID -->
+  <section class="section-editorial" style="padding-top: 0;">
+    <div class="container">
+      <div class="grid-offset-desc" style="align-items: start; margin-top: 0;">
+        <div>
+          <h2 class="headline-lg">Interior<br><span style="color: var(--accent);">Finishing.</span></h2>
+          <p class="text-body-lg" style="margin-top: 40px;">We transform raw spaces into finished, beautiful interiors with meticulous attention to detail. From structural framing to the absolute final spatial alignment.</p>
+        </div>
+        <div>
+          <ul class="service-detail-list">
+            <li>Drywall Operations <span>Precision installation and seamless finishing.</span></li>
+            <li>Flooring Systems <span>Hardwood, architectural tile, custom surfaces.</span></li>
+            <li>Custom Cabinetry <span>Integrated countertop and storage solutions.</span></li>
+            <li>Aesthetic Coating <span>Advanced painting, texturing, and wallpapering.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="width: 100%; height: 1px; background: var(--border-color); margin: 120px 0;"></div>
+
+      <div class="grid-offset-desc" style="align-items: start; margin-top: 0;">
+        <div>
+          <h2 class="headline-lg">Exterior<br><span style="color: var(--text-muted);">Landscape.</span></h2>
+          <p class="text-body-lg" style="margin-top: 40px;">Enhance property flow and command curb appeal with expert hardscaping and environmental integration.</p>
+        </div>
+        <div>
+          <ul class="service-detail-list" style="border-left-color: var(--text-muted);">
+            <li>Structural Hardscape <span>Driveways, walkways, structural patios.</span></li>
+            <li>Boundary Definition <span>Architectural fencing and outdoor structures.</span></li>
+            <li>Topography Adjustment <span>Retaining walls, precise grading and leveling.</span></li>
+            <li>Environmental Lighting <span>Dynamic outdoor lighting deployment.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HEAVY TEXT CTA -->
+  <section class="section-editorial">
+    <div class="container" style="text-align: center;">
+      <h2 class="headline-mega" style="font-size: clamp(2.5rem, 10vw, 8rem); line-height: 0.9; margin-bottom: 60px;">
+        INITIATE<br>
+        <span style="color: var(--accent);">THE BUILD.</span>
+      </h2>
+      <a href="contact.html" class="btn-editorial" style="font-size: 1.5rem; justify-content: center; width: auto; margin: 0 auto;">
+        Discuss Requirements
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ASYMMETRICAL FOOTER (Reused) -->
+  <footer class="footer-editorial">
+    <div class="container footer-grid-ed">
+      <div>
+        <h2 class="footer-mega-text">Build<br>With Us.</h2>
+        <div style="font-weight: 700; color: var(--accent); margin-bottom: 16px;">CAGE: 9YUB3 | UEI: Q1QGTVS3NC29</div>
+        <p class="text-body-lg" style="font-size: 1rem; max-width: 300px;">
+          5257 Buckeystown Pike #282<br>Frederick MD 21703<br><br>
+          info@beyond3k.com<br>
+          +1 (240) 600-5011
+        </p>
+      </div>
+
+      <div>
+        <span class="eyebrow" style="margin-bottom: 40px;">Company</span>
+        <ul class="footer-links-ed">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <span class="eyebrow" style="margin-bottom: 40px;">Services</span>
+        <ul class="footer-links-ed">
+          <li><a href="general-construction.html">General Construction</a></li>
+          <li><a href="facility-maintenance.html">Facility Maintenance</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container" style="margin-top: 120px; border-top: 1px solid var(--border-color); padding-top: 24px; color: var(--text-muted); font-size: 0.875rem; display: flex; justify-content: space-between;">
+      <span>© 2026 BEYOND3K LLC.</span>
+      <span>Developed by Hashnate.</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
