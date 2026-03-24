@@ -26,8 +26,8 @@
   <!-- HEADER -->
   <header class="header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">
-        BYND<span>3K</span>
+      <a href="index.html" class="logo" aria-label="BEYOND3K LLC">
+        <img src="assets/Beyond3K.png" alt="BEYOND3K LLC">
       </a>
       
       <nav class="nav-links">
@@ -59,28 +59,25 @@
     <a href="contact.html">Contact Us</a>
   </div>
 
-  <!-- HERO OFFSET -->
-  <section class="hero-offset">
-    <div class="hero-left">
-      <span class="eyebrow">Founded Since 2017</span>
-      <h1 class="headline-mega">
-        BEYOND<br>
-        <span>3K</span> LLC.
+  <!-- HERO 3D ANIMATED -->
+  <section class="hero-center-wrap">
+    <!-- 3D Background Canvas -->
+    <canvas id="hero-3d-canvas" class="hero-3d-canvas"></canvas>
+    
+    <div class="container hero-center-content">
+      <span class="eyebrow" style="justify-content: center; margin-bottom: var(--space-6x);">Founded Since 2017</span>
+      <h1 class="headline-mega hero-headline">
+        BEYOND<span>3K</span><br>
+        LLC.
       </h1>
-      <p class="text-body-lg" style="margin-top: 48px; max-width: 500px;">
+      <p class="text-body-lg hero-subtext">
         A dedicated team of professionals committed to making construction and renovation projects simple and successful. Honesty, reliability, and hard work — in every job.
       </p>
-      <div style="margin-top: 60px;">
+      <div style="margin-top: var(--space-10x);">
         <a href="about.html" class="btn-editorial">
           Explore The Vision
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-      </div>
-    </div>
-    
-    <div class="hero-right">
-      <div class="hero-img-wrap">
-        <img src="assets/crop-architect-opening-blueprint-1.jpg" alt="Architect Blueprint">
       </div>
     </div>
   </section>
@@ -103,9 +100,9 @@
       <div class="about-text-block">
         <span class="eyebrow">About Beyond3K</span>
         <h2 class="headline-xl">At Beyond<br>3K LLC,</h2>
-        <h3 class="headline-lg" style="color: var(--text-muted); margin-bottom: 60px;">Founded in 2017</h3>
+        <h3 class="headline-lg" style="color: var(--text-muted); margin-bottom: var(--space-6x);">Founded in 2017</h3>
         
-        <p class="text-body-lg" style="margin-bottom: 40px; border-left: 2px solid var(--accent); padding-left: 24px;">
+        <p class="text-body-lg" style="margin-bottom: var(--space-6x); border-left: 2px solid var(--accent); padding-left: 24px;">
           We are a dedicated team of professionals committed to making construction and renovation projects simple and successful. With a focus on honesty, reliability, and hard work, we bring a straightforward approach to every job we undertake.
         </p>
 
@@ -129,7 +126,7 @@
   <!-- STAGGERED SERVICES -->
   <section class="services-staggered">
     <div class="container">
-      <div style="margin-bottom: 120px;">
+      <div style="margin-bottom: var(--space-10x);">
         <span class="eyebrow">Exclusive Services</span>
         <h2 class="headline-xl">What We <span>Do.</span></h2>
       </div>
@@ -164,14 +161,14 @@
   <!-- HEAVY TEXT CTA -->
   <section class="section-editorial">
     <div class="container">
-      <h2 class="headline-mega" style="text-align: right; white-space: normal; line-height: 0.8; margin-bottom: 80px;">
+      <h2 class="headline-mega" style="text-align: left; white-space: normal; line-height: 0.9; margin-bottom: var(--space-6x);">
         TRUSTED<br><span>SERVICES.</span>
       </h2>
-      <div style="display: flex; justify-content: flex-end; align-items: flex-end; gap: 80px;">
-        <p class="text-body-lg" style="max-width: 400px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: var(--space-10x);">
+        <p class="text-body-lg" style="max-width: 500px;">
           At BEYOND3K LLC, we deliver reliable and high-quality construction services. Trust us to bring your vision to life.
         </p>
-        <a href="contact.html" class="btn-editorial" style="font-size: 1.5rem;">
+        <a href="contact.html" class="btn-editorial" style="font-size: 1.25rem;">
           Hire Us Now
           <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -209,12 +206,14 @@
         </ul>
       </div>
     </div>
-    <div class="container" style="margin-top: 120px; border-top: 1px solid var(--border-color); padding-top: 24px; color: var(--text-muted); font-size: 0.875rem; display: flex; justify-content: space-between;">
+    <div class="container footer-bottom" style="margin-top: var(--space-10x); border-top: 1px solid var(--border-color); padding-top: 24px; color: var(--text-muted); font-size: 0.875rem; display: flex; justify-content: space-between;">
       <span>© 2026 BEYOND3K LLC.</span>
       <span>Developed by Hashnate.</span>
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/3d-bg.js"></script>
 </body>
 </html>

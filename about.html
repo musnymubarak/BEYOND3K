@@ -26,8 +26,8 @@
   <!-- HEADER -->
   <header class="header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">
-        BYND<span>3K</span>
+      <a href="index.html" class="logo" aria-label="BEYOND3K LLC">
+        <img src="assets/Beyond3K.png" alt="BEYOND3K LLC">
       </a>
       
       <nav class="nav-links">
@@ -60,14 +60,14 @@
   </div>
 
   <!-- MASSIVE TITLE OVERLAY -->
-  <section class="section-editorial" style="padding-top: var(--space-20x); padding-bottom: 0;">
+  <section class="section-editorial" style="padding-top: clamp(140px, 12vw, 200px); padding-bottom: clamp(60px, 8vw, 120px); min-height: 100vh; display: flex; align-items: flex-start; justify-content: center; flex-direction: column;">
     <div class="container relative">
       <span class="eyebrow" style="margin-bottom: 24px;">Our Story</span>
       <h1 class="headline-mega" style="line-height: 0.8; letter-spacing: -0.07em;">
         BEYOND<br>
         EXPECTATION.
       </h1>
-      <p class="text-body-lg" style="margin-top: 60px; max-width: 800px; font-size: 1.5rem; border-left: 2px solid var(--accent); padding-left: 32px;">
+      <p class="about-hero-text">
         "We are a dedicated team of professionals committed to making construction and renovation projects simple and successful. With a focus on honesty, reliability, and hard work, we bring a straightforward approach to every job we undertake."
       </p>
     </div>
@@ -81,7 +81,7 @@
         <p class="text-body-lg" style="margin-bottom: 40px;">
           Since our founding in 2017, BEYOND3K LLC has grown into a trusted name in the construction and facility management industry across Maryland and beyond. Our team is built on values that put the client first and the project second to none.
         </p>
-        <ul style="margin-bottom: 60px; display: flex; flex-direction: column; gap: 40px;">
+        <ul class="about-values-list">
           <li>
             <span class="eyebrow" style="color: var(--text-primary); margin-bottom: 12px;">Honesty & Integrity</span>
             <p class="text-body-lg" style="font-size: 1rem; color: var(--text-secondary);">We operate with complete transparency — no hidden costs, no surprises.</p>
@@ -94,10 +94,10 @@
       </div>
       
       <div class="about-images-wrap">
-        <div class="about-img-large" style="width: 100%; right: -5%;">
+        <div class="about-img-large" style="width: 100%;">
           <img src="assets/building-concrete-house-scaled.jpg" alt="Construction Flow">
         </div>
-        <div class="about-img-small" style="left: -15%; bottom: -10%;">
+        <div class="about-img-small" style="left: -10%; bottom: -15%; z-index: 5;">
           <img src="assets/modern-styled-small-entryway_23-2150712857-e1719752940560-819x1024.jpg" alt="Modern Interior" style="filter: grayscale(1);">
         </div>
       </div>
@@ -105,9 +105,9 @@
   </section>
 
   <!-- STAGGERED WORK PROCESS -->
-  <section class="services-staggered" style="border-top: 1px solid var(--border-color); margin-top: 100px;">
+  <section class="services-staggered" style="border-top: 1px solid var(--border-color); margin-top: var(--space-10x);">
     <div class="container">
-      <div style="margin-bottom: 120px;">
+      <div style="margin-bottom: var(--space-10x);">
         <span class="eyebrow">How We Work</span>
         <h2 class="headline-xl">Process.</h2>
       </div>
@@ -117,7 +117,7 @@
           <img src="assets/crop-architect-opening-blueprint-1.jpg" alt="Plan" style="width: 100%; height: 100%;">
           <div class="service-num">01</div>
         </div>
-        <div class="service-text" style="width: 60%;">
+        <div class="service-text">
           <h3 class="headline-lg" style="margin-bottom: 24px;">Plan For<br>Work</h3>
           <p class="text-body-lg">We sit down with you to understand the project scope, timeline, and budget. A detailed plan is drafted before a single nail is hammered.</p>
         </div>
@@ -128,7 +128,7 @@
           <img src="assets/building-concrete-house-scaled.jpg" alt="Implementation" style="width: 100%; height: 100%;">
           <div class="service-num">02</div>
         </div>
-        <div class="service-text" style="width: 60%;">
+        <div class="service-text">
           <h3 class="headline-lg" style="margin-bottom: 24px;">Implementation<br>& Building</h3>
           <p class="text-body-lg">Our skilled team executes the plan with precision and efficiency, using quality materials and proven techniques throughout the project.</p>
         </div>
@@ -139,7 +139,7 @@
           <img src="assets/rustic-patio-furniture-house-deck-with-vegetation_23-2150698298-e1719753068712-820x1024.jpg" alt="Closure" style="width: 100%; height: 100%;">
           <div class="service-num">03</div>
         </div>
-        <div class="service-text" style="width: 60%;">
+        <div class="service-text">
           <h3 class="headline-lg" style="margin-bottom: 24px;">Project<br>Closure</h3>
           <p class="text-body-lg">A final walkthrough ensures everything meets your expectations. We handle cleanup, documentation, and make sure you're 100% satisfied.</p>
         </div>
@@ -177,7 +177,7 @@
         </ul>
       </div>
     </div>
-    <div class="container" style="margin-top: 120px; border-top: 1px solid var(--border-color); padding-top: 24px; color: var(--text-muted); font-size: 0.875rem; display: flex; justify-content: space-between;">
+    <div class="container footer-bottom" style="margin-top: var(--space-10x); border-top: 1px solid var(--border-color); padding-top: 24px; color: var(--text-muted); font-size: 0.875rem; display: flex; justify-content: space-between;">
       <span>© 2026 BEYOND3K LLC.</span>
       <span>Developed by Hashnate.</span>
     </div>
