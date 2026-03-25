@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>General Construction – BEYOND3K LLC</title>
-  <meta name="description" content="BEYOND3K LLC provides comprehensive general construction services covering all aspects of construction.">
+  <meta name="description"
+    content="BEYOND3K LLC provides comprehensive general construction services covering all aspects of construction — from interior finishing to exterior landscape.">
   <link rel="icon" type="image/png" href="assets/Beyond3K.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
-  
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-  <!-- BACKGROUND GRID LINES -->
   <div class="grid-lines">
     <div class="grid-line"></div>
     <div class="grid-line"></div>
@@ -23,28 +24,27 @@
     <div class="grid-line"></div>
   </div>
 
-  <!-- HEADER -->
   <header class="header">
     <div class="container header-inner">
       <a href="index.html" class="logo" aria-label="BEYOND3K LLC">
         <img src="assets/Beyond3K.png" alt="BEYOND3K LLC">
       </a>
-      
       <nav class="nav-links">
         <a href="index.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About</a>
         <a href="services.html" class="nav-link">Services</a>
-        <a href="general-construction.html" class="nav-link" style="color: var(--accent);">General Construction</a>
+        <a href="general-construction.html" class="nav-link active">General Construction</a>
         <a href="facility-maintenance.html" class="nav-link">Maintenance</a>
       </nav>
-
       <div class="theme-toggle-wrap">
-        <a href="contact.html" class="btn-editorial" style="color: inherit; font-size: 0.75rem;">Contact Us</a>
-        <button class="theme-toggle" aria-label="Toggle Theme">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        </button>
+        <a href="contact.html" class="btn-editorial">Contact Us</a>
+        <button class="theme-toggle" aria-label="Toggle Theme"></button>
         <button class="mobile-toggle" aria-label="Toggle Menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
         </button>
       </div>
     </div>
@@ -59,32 +59,38 @@
     <a href="contact.html">Contact Us</a>
   </div>
 
-  <!-- MASSIVE DESCRIPTIVE HERO -->
-  <section class="section-editorial" style="padding-top: clamp(140px, 12vw, 200px); padding-bottom: clamp(60px, 8vw, 120px); min-height: 100vh; display: flex; align-items: flex-start; justify-content: center; flex-direction: column;">
-    <div class="container relative">
-      <span class="eyebrow" style="margin-bottom: 24px;">Discipline Overview</span>
-      <h1 class="headline-mega" style="line-height: 0.8; letter-spacing: -0.07em; text-align: left;">
-        GENERAL<br>
-        <span style="color: var(--text-muted);">CONSTRUCTION.</span>
+  <!-- HERO -->
+  <section class="section-editorial"
+    style="padding-top:clamp(120px,12vw,200px); padding-bottom:var(--space-20x); min-height:100svh; display:flex; align-items:flex-start; justify-content:center; flex-direction:column;">
+    <div class="container">
+      <span class="eyebrow" style="margin-bottom:var(--space-3x);">Discipline Overview</span>
+      <h1 class="headline-mega" style="line-height:0.85; letter-spacing:-0.06em;">
+        GENERAL<br><span style="color:var(--text-muted);">CONSTRUCTION.</span>
       </h1>
-      <p class="about-hero-text" style="margin-top: 60px; max-width: 800px;">
-        Comprehensive contracting services that covers all aspects of construction. From ground-up structural implementations to fine-grained exterior landscapes, we define space through unyielding quality.
+      <p class="about-hero-text" style="margin-top:var(--space-6x);">
+        Comprehensive contracting services that covers all aspects of construction. From ground-up structural
+        implementations to fine-grained exterior landscapes, we define space through unyielding quality.
       </p>
     </div>
   </section>
 
-  <!-- IMMERSIVE BLEED IMAGE -->
-  <div class="huge-image-bleed">
-    <img src="assets/building-concrete-house-scaled.jpg" alt="Construction Site">
+  <!-- BLEED IMAGE -->
+  <div class="container">
+    <div class="huge-image-bleed">
+      <img src="assets/building-concrete-house-scaled.jpg" alt="General Construction Site">
+    </div>
   </div>
 
-  <!-- BREAKDOWN GRID -->
-  <section class="section-editorial" style="padding-top: 0;">
+  <!-- SERVICE BREAKDOWN -->
+  <section class="section-editorial section-no-pt">
     <div class="container">
-      <div class="grid-offset-desc" style="align-items: start; margin-top: 0;">
+
+      <div class="grid-offset-desc">
         <div>
-          <h2 class="headline-lg">Interior<br><span style="color: var(--accent);">Finishing.</span></h2>
-          <p class="text-body-lg" style="margin-top: 40px;">We transform raw spaces into finished, beautiful interiors with meticulous attention to detail. From structural framing to the absolute final spatial alignment.</p>
+          <h2 class="headline-lg">Interior<br><span style="color:var(--accent);">Finishing.</span></h2>
+          <p class="text-body-lg" style="margin-top:var(--space-6x);">We transform raw spaces into finished, beautiful
+            interiors with meticulous attention to detail. From structural framing to the absolute final spatial
+            alignment.</p>
         </div>
         <div>
           <ul class="service-detail-list">
@@ -92,79 +98,101 @@
             <li>Flooring Systems <span>Hardwood, architectural tile, custom surfaces.</span></li>
             <li>Custom Cabinetry <span>Integrated countertop and storage solutions.</span></li>
             <li>Aesthetic Coating <span>Advanced painting, texturing, and wallpapering.</span></li>
+            <li>Trim &amp; Millwork <span>Crown moulding, baseboards, and custom woodwork.</span></li>
           </ul>
         </div>
       </div>
 
-      <div style="width: 100%; height: 1px; background: var(--border-color); margin: var(--space-10x) 0;"></div>
+      <div style="width:100%; height:1px; background:var(--border-color); margin:var(--space-20x) 0;"></div>
 
-      <div class="grid-offset-desc" style="align-items: start; margin-top: 0;">
+      <div class="grid-offset-desc">
         <div>
-          <h2 class="headline-lg">Exterior<br><span style="color: var(--text-muted);">Landscape.</span></h2>
-          <p class="text-body-lg" style="margin-top: 40px;">Enhance property flow and command curb appeal with expert hardscaping and environmental integration.</p>
+          <h2 class="headline-lg">Exterior<br><span style="color:var(--text-muted);">Landscape.</span></h2>
+          <p class="text-body-lg" style="margin-top:var(--space-6x);">Enhance property flow and command curb appeal with
+            expert hardscaping and environmental integration.</p>
         </div>
         <div>
-          <ul class="service-detail-list" style="border-left-color: var(--text-muted);">
+          <ul class="service-detail-list" style="border-left-color:var(--text-muted);">
             <li>Structural Hardscape <span>Driveways, walkways, structural patios.</span></li>
             <li>Boundary Definition <span>Architectural fencing and outdoor structures.</span></li>
             <li>Topography Adjustment <span>Retaining walls, precise grading and leveling.</span></li>
             <li>Environmental Lighting <span>Dynamic outdoor lighting deployment.</span></li>
+            <li>Deck &amp; Patio Build-outs <span>Custom outdoor living spaces, pergolas.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="width:100%; height:1px; background:var(--border-color); margin:var(--space-20x) 0;"></div>
+
+      <div class="grid-offset-desc">
+        <div>
+          <h2 class="headline-lg">Structural<br><span style="color:var(--accent);">Systems.</span></h2>
+          <p class="text-body-lg" style="margin-top:var(--space-6x);">From foundation to roof, our structural team
+            handles the full scope of load-bearing and systems work.</p>
+        </div>
+        <div>
+          <ul class="service-detail-list">
+            <li>Framing &amp; Foundation <span>Structural framing, slab, and footing work.</span></li>
+            <li>Roofing Systems <span>Installation, repair, and waterproofing solutions.</span></li>
+            <li>Electrical &amp; Plumbing Rough-in <span>Coordinated MEP rough-in services.</span></li>
+            <li>Insulation <span>Thermal and acoustic insulation systems.</span></li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- HEAVY TEXT CTA -->
+  <!-- CTA -->
   <section class="section-editorial">
-    <div class="container" style="text-align: center;">
-      <h2 class="headline-mega" style="line-height: 0.8; letter-spacing: -0.07em; margin-bottom: 60px;">
-        INITIATE<br>
-        <span style="color: var(--accent);">THE BUILD.</span>
+    <div class="container" style="text-align:center;">
+      <h2 class="headline-mega" style="line-height:0.85; margin-bottom:var(--space-6x);">
+        INITIATE<br><span>THE BUILD.</span>
       </h2>
-      <a href="contact.html" class="btn-editorial" style="font-size: 1.5rem; justify-content: center; width: auto; margin: 0 auto;">
+      <a href="contact.html" class="btn-editorial" style="font-size:1rem; justify-content:center; display:inline-flex;">
         Discuss Requirements
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
       </a>
     </div>
   </section>
 
-  <!-- ASYMMETRICAL FOOTER (Reused) -->
+  <!-- FOOTER -->
   <footer class="footer-editorial">
     <div class="container footer-grid-ed">
       <div>
         <h2 class="footer-mega-text">Build<br>With Us.</h2>
-        <div style="font-weight: 700; color: var(--accent); margin-bottom: 16px;">CAGE: 9YUB3 | UEI: Q1QGTVS3NC29</div>
-        <p class="text-body-lg" style="font-size: 1rem; max-width: 300px;">
+        <div
+          style="font-weight:700; color:var(--accent); margin-bottom:14px; font-size:0.8125rem; letter-spacing:0.04em;">
+          CAGE: 9YUB3 &nbsp;|&nbsp; UEI: Q1QGTVS3NC29</div>
+        <p class="text-body-lg" style="font-size:0.9375rem; max-width:280px;">
           5257 Buckeystown Pike #282<br>Frederick MD 21703<br><br>
-          info@beyond3k.com<br>
-          +1 (240) 600-5011
+          info@beyond3k.com<br>+1 (240) 600-5011
         </p>
       </div>
-
       <div>
-        <span class="eyebrow" style="margin-bottom: 40px;">Company</span>
+        <span class="eyebrow" style="margin-bottom:32px;">Company</span>
         <ul class="footer-links-ed">
           <li><a href="about.html">About Us</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
-
       <div>
-        <span class="eyebrow" style="margin-bottom: 40px;">Services</span>
+        <span class="eyebrow" style="margin-bottom:32px;">Services</span>
         <ul class="footer-links-ed">
           <li><a href="general-construction.html">General Construction</a></li>
           <li><a href="facility-maintenance.html">Facility Maintenance</a></li>
         </ul>
       </div>
     </div>
-    <div class="container footer-bottom" style="margin-top: var(--space-10x); border-top: 1px solid var(--border-color); padding-top: 24px; color: var(--text-muted); font-size: 0.875rem; display: flex; justify-content: space-between;">
-      <span>© 2026 BEYOND3K LLC.</span>
+    <div class="container footer-bottom">
+      <span>© 2026 BEYOND3K LLC. All rights reserved.</span>
       <span>Developed by Hashnate.</span>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
 </body>
+
 </html>

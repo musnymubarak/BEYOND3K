@@ -1,43 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services – BEYOND3K LLC</title>
-  <meta name="description" content="BEYOND3K LLC offers General Construction and Facility Maintenance services across Maryland.">
+  <meta name="description"
+    content="BEYOND3K LLC offers General Construction and Facility Maintenance services across Maryland. Licensed and insured professionals.">
   <link rel="icon" type="image/png" href="assets/Beyond3K.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
-  
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    .advantage-list {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0;
-      border-top: 1px solid var(--border-color);
-    }
-    .advantage-row {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      padding: var(--space-6x) 0;
-      border-bottom: 1px solid var(--border-color);
-      align-items: center;
-    }
-    @media (max-width: 900px) {
-      .advantage-row { grid-template-columns: 1fr; gap: 24px; }
-    }
-    .advantage-col h3 {
-      font-size: clamp(1.5rem, 3vw, 2.5rem);
-      margin: 0;
-    }
-  </style>
 </head>
+
 <body>
 
-  <!-- BACKGROUND GRID LINES -->
   <div class="grid-lines">
     <div class="grid-line"></div>
     <div class="grid-line"></div>
@@ -45,28 +24,27 @@
     <div class="grid-line"></div>
   </div>
 
-  <!-- HEADER -->
   <header class="header">
     <div class="container header-inner">
       <a href="index.html" class="logo" aria-label="BEYOND3K LLC">
         <img src="assets/Beyond3K.png" alt="BEYOND3K LLC">
       </a>
-      
       <nav class="nav-links">
         <a href="index.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About</a>
-        <a href="services.html" class="nav-link" style="color: var(--accent);">Services</a>
+        <a href="services.html" class="nav-link active">Services</a>
         <a href="general-construction.html" class="nav-link">General Construction</a>
         <a href="facility-maintenance.html" class="nav-link">Maintenance</a>
       </nav>
-
       <div class="theme-toggle-wrap">
-        <a href="contact.html" class="btn-editorial" style="color: inherit; font-size: 0.75rem;">Contact Us</a>
-        <button class="theme-toggle" aria-label="Toggle Theme">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        </button>
+        <a href="contact.html" class="btn-editorial">Contact Us</a>
+        <button class="theme-toggle" aria-label="Toggle Theme"></button>
         <button class="mobile-toggle" aria-label="Toggle Menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
         </button>
       </div>
     </div>
@@ -81,55 +59,69 @@
     <a href="contact.html">Contact Us</a>
   </div>
 
-  <!-- MASSIVE TITLE OVERLAY -->
-  <section class="section-editorial" style="padding-top: clamp(140px, 12vw, 200px); padding-bottom: clamp(60px, 8vw, 120px); min-height: 100vh; display: flex; align-items: flex-start; justify-content: center; flex-direction: column;">
-    <div class="container relative">
-      <span class="eyebrow" style="margin-bottom: 24px;">Our Core Disciplines</span>
-      <h1 class="headline-mega" style="line-height: 0.8; letter-spacing: -0.07em; text-align: left;">
-        ARCHITECTING<br>
-        <span style="color: var(--text-muted);">THE FUTURE.</span>
+  <!-- HERO -->
+  <section class="section-editorial"
+    style="padding-top:clamp(120px,12vw,200px); padding-bottom:var(--space-20x); min-height:100svh; display:flex; align-items:flex-start; justify-content:center; flex-direction:column;">
+    <div class="container">
+      <span class="eyebrow" style="margin-bottom:var(--space-3x);">Our Core Disciplines</span>
+      <h1 class="headline-mega" style="line-height:0.85; letter-spacing:-0.06em;">
+        ARCHITECTING<br><span style="color:var(--text-muted);">THE FUTURE.</span>
       </h1>
-      <p class="about-hero-text" style="margin-top: 60px; max-width: 800px;">
-        “Our corporate capabilities can help you with picking out the best professionals for your project, ensuring every detail is executed flawlessly.”
+      <p class="about-hero-text" style="margin-top:var(--space-6x);">
+        "Our corporate capabilities can help you with picking out the best professionals for your project, ensuring
+        every detail is executed flawlessly."
       </p>
     </div>
   </section>
 
-  <!-- MAIN SERVICES (Staggered Offset Images) -->
-  <section class="services-staggered" style="padding-top: 0;">
+  <!-- SERVICES LIST -->
+  <section class="services-staggered section-no-pt">
     <div class="container">
       <div class="service-item-offset">
         <div class="service-img">
-          <img src="assets/building-concrete-house-scaled.jpg" alt="General Construction" style="width: 100%; height: 100%;">
+          <img src="assets/building-concrete-house-scaled.jpg" alt="General Construction">
           <div class="service-num">I.</div>
         </div>
         <div class="service-text">
-          <h3 class="headline-lg" style="margin-bottom: 24px;">General<br>Construction</h3>
-          <p class="text-body-lg" style="margin-bottom: 40px;">Comprehensive contracting services that covers all aspects of construction. From planning phase to final handover, we manage complexity with extreme precision.</p>
-          <a href="general-construction.html" class="btn-editorial">Explore Discipline <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <h3 class="headline-lg" style="margin-bottom:16px;">General<br>Construction</h3>
+          <p class="text-body-lg" style="margin-bottom:var(--space-6x);">Comprehensive contracting services that covers
+            all aspects of construction. From planning phase to final handover, we manage complexity with extreme
+            precision.</p>
+          <a href="general-construction.html" class="btn-editorial">
+            Explore Discipline
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
         </div>
       </div>
 
-      <div class="service-item-offset reversed" style="margin-top: var(--space-10x);">
+      <div class="service-item-offset reversed">
         <div class="service-img">
-          <img src="assets/2150576468.jpg" alt="Facility Maintenance" style="width: 100%; height: 100%;">
-          <div class="service-num" style="left: auto; right: -80px;">II.</div>
+          <img src="assets/2150576468.jpg" alt="Facility Maintenance">
+          <div class="service-num">II.</div>
         </div>
         <div class="service-text">
-          <h3 class="headline-lg" style="margin-bottom: 24px;">Facility<br>Maintenance</h3>
-          <p class="text-body-lg" style="margin-bottom: 40px;">Preventive maintenance ensuring peak performance of a wide variety of skilled tasks including custodial service and system upkeep.</p>
-          <a href="facility-maintenance.html" class="btn-editorial">Explore Discipline <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <h3 class="headline-lg" style="margin-bottom:16px;">Facility<br>Maintenance</h3>
+          <p class="text-body-lg" style="margin-bottom:var(--space-6x);">Preventive maintenance ensuring peak
+            performance of a wide variety of skilled tasks including custodial service and system upkeep.</p>
+          <a href="facility-maintenance.html" class="btn-editorial">
+            Explore Discipline
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ADVANTAGES LIST (Editorial Grid) -->
+  <!-- ADVANTAGES -->
   <section class="section-editorial">
     <div class="container">
-      <div style="margin-bottom: var(--space-10x);">
+      <div style="margin-bottom:var(--space-10x);">
         <span class="eyebrow">Why Choose Us</span>
-        <h2 class="headline-xl">Advantages.</h2>
+        <h2 class="headline-xl">Our <span style="color:var(--accent);">Advantages.</span></h2>
       </div>
 
       <div class="advantage-list">
@@ -137,74 +129,102 @@
           <div class="advantage-col">
             <h3>Team Leadership</h3>
           </div>
-          <div class="advantage-col">
-            <p class="text-body-lg" style="max-width: none;">Experienced project leaders who guide every team to deliver results on time and on budget, maintaining strict architectural oversight.</p>
+          <div>
+            <p class="text-body-lg" style="max-width:none;">Experienced project leaders who guide every team to deliver
+              results on time and on budget, maintaining strict architectural oversight.</p>
           </div>
         </div>
         <div class="advantage-row">
           <div class="advantage-col">
             <h3>Employee Unity</h3>
           </div>
-          <div class="advantage-col">
-            <p class="text-body-lg" style="max-width: none;">A cohesive workforce that collaborates, communicates, and delivers as one seamless operational unit under pressure.</p>
+          <div>
+            <p class="text-body-lg" style="max-width:none;">A cohesive workforce that collaborates, communicates, and
+              delivers as one seamless operational unit under pressure.</p>
           </div>
         </div>
         <div class="advantage-row">
           <div class="advantage-col">
             <h3>Progress Strategy</h3>
           </div>
-          <div class="advantage-col">
-            <p class="text-body-lg" style="max-width: none;">Data-driven strategies that track progress and ensure continuous project advancement without compromising the aesthetic vision.</p>
+          <div>
+            <p class="text-body-lg" style="max-width:none;">Data-driven strategies that track progress and ensure
+              continuous project advancement without compromising the quality or vision.</p>
           </div>
         </div>
         <div class="advantage-row">
           <div class="advantage-col">
-            <h3 style="color: var(--accent);">Communication</h3>
+            <h3 style="color:var(--accent);">Communication</h3>
           </div>
+          <div>
+            <p class="text-body-lg" style="max-width:none;">Clear, consistent client communication throughout every
+              phase of every project. Transparency is our structural baseline.</p>
+          </div>
+        </div>
+        <div class="advantage-row">
           <div class="advantage-col">
-            <p class="text-body-lg" style="max-width: none;">Clear, consistent client communication throughout every phase of every project. Transparency is our structural baseline.</p>
+            <h3>Licensed &amp; Insured</h3>
+          </div>
+          <div>
+            <p class="text-body-lg" style="max-width:none;">Fully licensed and insured operations. CAGE: 9YUB3 | UEI:
+              Q1QGTVS3NC29. Complete peace of mind on every engagement.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ASYMMETRICAL FOOTER (Reused) -->
+  <!-- CTA -->
+  <section class="section-editorial">
+    <div class="container" style="text-align:center;">
+      <h2 class="headline-mega" style="line-height:0.85; margin-bottom:var(--space-6x);">
+        START YOUR<br><span>PROJECT.</span>
+      </h2>
+      <a href="contact.html" class="btn-editorial" style="font-size:1rem; justify-content:center; display:inline-flex;">
+        Discuss Requirements
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer-editorial">
     <div class="container footer-grid-ed">
       <div>
         <h2 class="footer-mega-text">Build<br>With Us.</h2>
-        <div style="font-weight: 700; color: var(--accent); margin-bottom: 16px;">CAGE: 9YUB3 | UEI: Q1QGTVS3NC29</div>
-        <p class="text-body-lg" style="font-size: 1rem; max-width: 300px;">
+        <div
+          style="font-weight:700; color:var(--accent); margin-bottom:14px; font-size:0.8125rem; letter-spacing:0.04em;">
+          CAGE: 9YUB3 &nbsp;|&nbsp; UEI: Q1QGTVS3NC29</div>
+        <p class="text-body-lg" style="font-size:0.9375rem; max-width:280px;">
           5257 Buckeystown Pike #282<br>Frederick MD 21703<br><br>
-          info@beyond3k.com<br>
-          +1 (240) 600-5011
+          info@beyond3k.com<br>+1 (240) 600-5011
         </p>
       </div>
-
       <div>
-        <span class="eyebrow" style="margin-bottom: 40px;">Company</span>
+        <span class="eyebrow" style="margin-bottom:32px;">Company</span>
         <ul class="footer-links-ed">
           <li><a href="about.html">About Us</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
-
       <div>
-        <span class="eyebrow" style="margin-bottom: 40px;">Services</span>
+        <span class="eyebrow" style="margin-bottom:32px;">Services</span>
         <ul class="footer-links-ed">
           <li><a href="general-construction.html">General Construction</a></li>
           <li><a href="facility-maintenance.html">Facility Maintenance</a></li>
         </ul>
       </div>
     </div>
-    <div class="container footer-bottom" style="margin-top: var(--space-10x); border-top: 1px solid var(--border-color); padding-top: 24px; color: var(--text-muted); font-size: 0.875rem; display: flex; justify-content: space-between;">
-      <span>© 2026 BEYOND3K LLC.</span>
+    <div class="container footer-bottom">
+      <span>© 2026 BEYOND3K LLC. All rights reserved.</span>
       <span>Developed by Hashnate.</span>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
 </body>
+
 </html>
