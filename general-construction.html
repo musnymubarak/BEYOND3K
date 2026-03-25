@@ -13,6 +13,140 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .janitorial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 140px var(--space-6x);
+      margin-top: var(--space-30x);
+    }
+
+    .janitorial-card {
+      position: relative;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: clamp(60px, 8vw, 100px) var(--container-pad) var(--space-6x);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      height: 100%;
+    }
+
+    .janitorial-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-8px);
+      box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.4);
+    }
+
+    .janitorial-card .card-circle {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: clamp(100px, 12vw, 140px);
+      height: clamp(100px, 12vw, 140px);
+      border-radius: 50%;
+      background: var(--accent);
+      border: 4px solid var(--bg-primary);
+      box-shadow: 0 0 0 2px var(--accent), 0 12px 24px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      z-index: 5;
+    }
+
+    .janitorial-card .card-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .janitorial-card:hover .card-circle img {
+      transform: scale(1.1);
+    }
+
+    .janitorial-card h3 {
+      font-size: 1.125rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .janitorial-card ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-left: 0;
+    }
+
+    .janitorial-card li {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .janitorial-card li::before {
+      content: "—";
+      color: var(--accent);
+      flex-shrink: 0;
+      font-weight: 900;
+    }
+
+    .huge-image-bleed {
+      width: 82vw;
+      margin: var(--space-20x) auto;
+      height: clamp(300px, 40vw, 500px);
+      overflow: hidden;
+      border-radius: 16px;
+      background: var(--bg-surface);
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.8s ease;
+      transform: perspective(1000px);
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+
+    .huge-image-bleed:hover {
+      transform: perspective(1000px) rotateX(1deg) scale(1.01);
+      box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.6);
+    }
+
+    .huge-image-bleed img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .huge-image-bleed:hover img {
+      transform: scale(1.04);
+    }
+
+    @media (max-width: 1080px) {
+      .janitorial-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 140px var(--space-6x);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .janitorial-grid {
+        grid-template-columns: 1fr;
+        gap: 140px;
+        margin-top: 100px;
+      }
+
+      .janitorial-card {
+        padding-top: 80px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -38,7 +172,6 @@
       </nav>
       <div class="theme-toggle-wrap">
         <a href="contact.html" class="btn-editorial">Contact Us</a>
-        <button class="theme-toggle" aria-label="Toggle Theme"></button>
         <button class="mobile-toggle" aria-label="Toggle Menu">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -68,77 +201,111 @@
         GENERAL<br><span style="color:var(--text-muted);">CONSTRUCTION.</span>
       </h1>
       <p class="about-hero-text" style="margin-top:var(--space-6x);">
-        Comprehensive contracting services that covers all aspects of construction. From ground-up structural
-        implementations to fine-grained exterior landscapes, we define space through unyielding quality.
+        Expert interior remodeling and specialized carpentry services. From high-end bathroom renovations to precision
+        crown molding and deck restoration, we define space through meticulous craftsmanship.
       </p>
     </div>
   </section>
 
   <!-- BLEED IMAGE -->
-  <div class="container">
-    <div class="huge-image-bleed">
-      <img src="assets/building-concrete-house-scaled.jpg" alt="General Construction Site">
-    </div>
+  <div class="huge-image-bleed">
+    <img src="assets/building-concrete-house-scaled.jpg" alt="General Construction Site">
   </div>
+  <br>
+  <br>
 
   <!-- SERVICE BREAKDOWN -->
   <section class="section-editorial section-no-pt">
     <div class="container">
 
-      <div class="grid-offset-desc">
-        <div>
-          <h2 class="headline-lg">Interior<br><span style="color:var(--accent);">Finishing.</span></h2>
-          <p class="text-body-lg" style="margin-top:var(--space-6x);">We transform raw spaces into finished, beautiful
-            interiors with meticulous attention to detail. From structural framing to the absolute final spatial
-            alignment.</p>
+      <div style="margin-bottom: var(--space-10x);">
+        <span class="eyebrow" style="color:var(--accent);">Specialized Remodeling</span>
+        <h2 class="headline-lg" style="margin-top: 10px; font-size: clamp(32px, 6vw, 56px); line-height: 1.1;">
+          CONSTRUCTION <span style="color:var(--text-muted);">SERVICES.</span>
+        </h2>
+      </div>
+      <br>
+
+      <div class="janitorial-grid" style="margin-top: var(--space-20x);">
+        <!-- Bathroom Remodeling -->
+        <div class="janitorial-card">
+          <div class="card-circle">
+            <img src="assets/construction_bathroom.png" alt="Bathroom Remodeling">
+          </div>
+          <h3>Bathroom Remodeling</h3>
+          <ul>
+            <li>Complete renovation from spatial planning to high-end finishes</li>
+            <li>High-end fixture and vanity installation</li>
+            <li>Custom luxury shower and bath solutions</li>
+          </ul>
         </div>
-        <div>
-          <ul class="service-detail-list">
-            <li>Drywall Operations <span>Precision installation and seamless finishing.</span></li>
-            <li>Flooring Systems <span>Hardwood, architectural tile, custom surfaces.</span></li>
-            <li>Custom Cabinetry <span>Integrated countertop and storage solutions.</span></li>
-            <li>Aesthetic Coating <span>Advanced painting, texturing, and wallpapering.</span></li>
-            <li>Trim &amp; Millwork <span>Crown moulding, baseboards, and custom woodwork.</span></li>
+
+        <!-- Kitchen Remodeling -->
+        <div class="janitorial-card">
+          <div class="card-circle">
+            <img src="assets/construction_kitchen.png" alt="Kitchen Remodeling">
+          </div>
+          <h3>Kitchen Remodeling</h3>
+          <ul>
+            <li>Modern kitchen design and open-concept transformation</li>
+            <li>Custom island builds and cabinetry integration</li>
+            <li>High-performance appliance and surface installation</li>
+          </ul>
+        </div>
+
+        <!-- Deck Building & Repair -->
+        <div class="janitorial-card">
+          <div class="card-circle">
+            <img src="assets/construction_deck.png" alt="Deck Building">
+          </div>
+          <h3>Deck Building &amp; Repair</h3>
+          <ul>
+            <li>Custom wood and composite deck design and construction</li>
+            <li>Structural restoration and safety inspections</li>
+            <li>Professional staining, sealing, and finishing</li>
+          </ul>
+        </div>
+
+        <!-- Popcorn Ceiling Removal -->
+        <div class="janitorial-card">
+          <div class="card-circle">
+            <img src="assets/construction_ceiling.png" alt="Popcorn Ceiling">
+          </div>
+          <h3>Popcorn Ceiling Removal</h3>
+          <ul>
+            <li>Professional texture removal and dust-free operations</li>
+            <li>Seamless drywall repair and smooth surface finishing</li>
+            <li>Aesthetic texturing or premium flat finishing</li>
+          </ul>
+        </div>
+
+        <!-- Crown Molding & Trim -->
+        <div class="janitorial-card">
+          <div class="card-circle">
+            <img src="assets/construction_molding.png" alt="Crown Molding">
+          </div>
+          <h3>Crown Molding &amp; Trim</h3>
+          <ul>
+            <li>Precision architectural millwork and molding installation</li>
+            <li>Integrated trim solutions for doors, windows, and floors</li>
+            <li>Custom decorative woodwork and architectural accents</li>
+          </ul>
+        </div>
+
+        <!-- Tile & Backsplash -->
+        <div class="janitorial-card">
+          <div class="card-circle">
+            <img src="assets/construction_tile.png" alt="Tile and Backsplash">
+          </div>
+          <h3>Tile &amp; Backsplash</h3>
+          <ul>
+            <li>High-end ceramic, stone, and mosaic tile installation</li>
+            <li>Custom kitchen backsplash and bath surfacing</li>
+            <li>Precision grout restoration and sealing</li>
           </ul>
         </div>
       </div>
 
-      <div style="width:100%; height:1px; background:var(--border-color); margin:var(--space-20x) 0;"></div>
-
-      <div class="grid-offset-desc">
-        <div>
-          <h2 class="headline-lg">Exterior<br><span style="color:var(--text-muted);">Landscape.</span></h2>
-          <p class="text-body-lg" style="margin-top:var(--space-6x);">Enhance property flow and command curb appeal with
-            expert hardscaping and environmental integration.</p>
-        </div>
-        <div>
-          <ul class="service-detail-list" style="border-left-color:var(--text-muted);">
-            <li>Structural Hardscape <span>Driveways, walkways, structural patios.</span></li>
-            <li>Boundary Definition <span>Architectural fencing and outdoor structures.</span></li>
-            <li>Topography Adjustment <span>Retaining walls, precise grading and leveling.</span></li>
-            <li>Environmental Lighting <span>Dynamic outdoor lighting deployment.</span></li>
-            <li>Deck &amp; Patio Build-outs <span>Custom outdoor living spaces, pergolas.</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <div style="width:100%; height:1px; background:var(--border-color); margin:var(--space-20x) 0;"></div>
-
-      <div class="grid-offset-desc">
-        <div>
-          <h2 class="headline-lg">Structural<br><span style="color:var(--accent);">Systems.</span></h2>
-          <p class="text-body-lg" style="margin-top:var(--space-6x);">From foundation to roof, our structural team
-            handles the full scope of load-bearing and systems work.</p>
-        </div>
-        <div>
-          <ul class="service-detail-list">
-            <li>Framing &amp; Foundation <span>Structural framing, slab, and footing work.</span></li>
-            <li>Roofing Systems <span>Installation, repair, and waterproofing solutions.</span></li>
-            <li>Electrical &amp; Plumbing Rough-in <span>Coordinated MEP rough-in services.</span></li>
-            <li>Insulation <span>Thermal and acoustic insulation systems.</span></li>
-          </ul>
-        </div>
-      </div>
     </div>
   </section>
 

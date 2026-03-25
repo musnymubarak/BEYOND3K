@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const material = new THREE.LineBasicMaterial({ 
         color: 0x933393, 
         transparent: true, 
-        opacity: 0.15 
+        opacity: 0.3 
     });
 
     const buildingCount = 40;

@@ -13,6 +13,140 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .janitorial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-30x) var(--space-6x);
+      margin-top: var(--space-30x);
+    }
+
+    .janitorial-card {
+      position: relative;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: clamp(60px, 8vw, 100px) var(--container-pad) var(--space-6x);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      height: 100%;
+    }
+
+    .janitorial-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-8px);
+      box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.4);
+    }
+
+    .janitorial-card .card-circle {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: clamp(100px, 12vw, 140px);
+      height: clamp(100px, 12vw, 140px);
+      border-radius: 50%;
+      background: var(--accent);
+      border: 4px solid var(--bg-primary);
+      box-shadow: 0 0 0 2px var(--accent), 0 12px 24px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      z-index: 5;
+    }
+
+    .janitorial-card .card-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .janitorial-card:hover .card-circle img {
+      transform: scale(1.1);
+    }
+
+    .janitorial-card h3 {
+      font-size: 1.125rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .janitorial-card ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-left: 0;
+    }
+
+    .janitorial-card li {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .janitorial-card li::before {
+      content: "—";
+      color: var(--accent);
+      flex-shrink: 0;
+      font-weight: 900;
+    }
+
+    .huge-image-bleed {
+      width: 82vw;
+      margin: var(--space-20x) auto;
+      height: clamp(300px, 40vw, 500px);
+      overflow: hidden;
+      border-radius: 16px;
+      background: var(--bg-surface);
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.8s ease;
+      transform: perspective(1000px);
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+
+    .huge-image-bleed:hover {
+      transform: perspective(1000px) rotateX(1deg) scale(1.01);
+      box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.6);
+    }
+
+    .huge-image-bleed img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .huge-image-bleed:hover img {
+      transform: scale(1.04);
+    }
+
+    @media (max-width: 1080px) {
+      .janitorial-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 140px var(--space-6x);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .janitorial-grid {
+        grid-template-columns: 1fr;
+        gap: 140px;
+        margin-top: 100px;
+      }
+
+      .janitorial-card {
+        padding-top: 80px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -38,7 +172,6 @@
       </nav>
       <div class="theme-toggle-wrap">
         <a href="contact.html" class="btn-editorial">Contact Us</a>
-        <button class="theme-toggle" aria-label="Toggle Theme"></button>
         <button class="mobile-toggle" aria-label="Toggle Menu">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -68,17 +201,15 @@
         FACILITY<br><span style="color:var(--text-muted);">MAINTENANCE.</span>
       </h1>
       <p class="about-hero-text" style="margin-top:var(--space-6x);">
-        From routine inspections to emergency rectifications, we maintain infrastructure performance at its absolute
-        peak. Stability is architected through proactive oversight.
+        Preventive maintenance to performance of a wide variety of skilled miscellaneous maintenance including custodial
+        service.
       </p>
     </div>
   </section>
 
   <!-- BLEED IMAGE -->
-  <div class="container">
-    <div class="huge-image-bleed">
-      <img src="assets/2150576468.jpg" alt="Facility Maintenance Operations">
-    </div>
+  <div class="huge-image-bleed">
+    <img src="assets/repair-home.webp" alt="Facility Maintenance Operations">
   </div>
 
   <!-- SERVICE BREAKDOWN -->
@@ -87,72 +218,105 @@
 
       <div class="grid-offset-desc">
         <div>
-          <h2 class="headline-lg">Systemic<br><span style="color:var(--accent);">Stability.</span></h2>
-          <p class="text-body-lg" style="margin-top:var(--space-6x);">Our preventive maintenance programs address
-            mechanical friction before it escalates into capital expenditure. A wide variety of skilled tasks managed
-            under one roof.</p>
+          <h2 class="headline-lg">Maintenance<br><span style="color:var(--accent);">Services.</span></h2>
+          <p class="text-body-lg" style="margin-top:var(--space-6x);">Services are essential for maintaining a safe,
+            healthy, and productive environment.</p>
         </div>
         <div>
           <ul class="service-detail-list">
-            <li>Preventative Scheduling <span>Automated and rigorous system checks.</span></li>
-            <li>Custodial Operations <span>High-grade janitorial and environmental upkeep.</span></li>
-            <li>HVAC &amp; Environmental <span>System inspection, calibration, and servicing.</span></li>
-            <li>Emergency Response <span>Rapid deployment for structural or systemic faults.</span></li>
-            <li>Plumbing Maintenance <span>Routine inspection and leak management.</span></li>
+            <li>Routine Inspections and Repairs</li>
+            <li>Preventive Maintenance</li>
+            <li>Building Exterior and Interior Maintenance</li>
+            <li>Emergency Maintenance</li>
           </ul>
         </div>
       </div>
 
       <div style="width:100%; height:1px; background:var(--border-color); margin:var(--space-20x) 0;"></div>
 
-      <div class="grid-offset-desc">
-        <div>
-          <h2 class="headline-lg">Operational<br><span style="color:var(--text-muted);">Integrity.</span></h2>
-          <p class="text-body-lg" style="margin-top:var(--space-6x);">Why we stand apart. Certified technicians deployed
-            24/7. We do not react; we prevent.</p>
-        </div>
-        <div>
-          <ul class="service-detail-list" style="border-left-color:var(--text-muted);">
-            <li>Proactive Approach <span>Identify potential issues pre-escalation.</span></li>
-            <li>Certified Operators <span>Trained, background-checked, rigorous standards.</span></li>
-            <li>24/7 Availability <span>Emergencies don't follow business hours.</span></li>
-            <li>Grounds Management <span>Full exterior upkeep to mirror interior quality.</span></li>
-            <li>Electrical Systems <span>Panel inspections, lighting, and circuit maintenance.</span></li>
-          </ul>
-        </div>
+      <div style="margin-bottom:var(--space-10x);">
+        <span class="eyebrow">Facility Hygiene</span>
+        <h2 class="headline-xl">Janitorial <span style="color:var(--text-muted);">Services.</span></h2>
       </div>
 
-      <div style="width:100%; height:1px; background:var(--border-color); margin:var(--space-20x) 0;"></div>
-
-      <!-- WHY PM MATTERS -->
-      <div class="grid-offset-desc">
-        <div>
-          <h2 class="headline-lg">Why<br><span style="color:var(--accent);">Preventive?</span></h2>
-          <p class="text-body-lg" style="margin-top:var(--space-6x);">Preventive maintenance reduces total cost of
-            ownership by catching issues early — before downtime, before damage, before disruption.</p>
+      <div class="janitorial-grid">
+        <!-- Daily Maintenance -->
+        <div class="janitorial-card">
+          <div class="card-circle">
+            <img src="https://beyond3k.com/wp-content/uploads/2025/11/2150552285.jpg" alt="Daily Maintenance">
+          </div>
+          <h3>Daily Maintenance</h3>
+          <ul>
+            <li>Sweeping, mopping, vacuuming, and polishing floors</li>
+            <li>Dusting surfaces, furniture, and fixtures</li>
+            <li>Cleaning and disinfecting restrooms</li>
+          </ul>
         </div>
-        <div style="display:flex; flex-direction:column; gap:var(--space-6x);">
-          <div style="border-left:2px solid var(--accent); padding-left:24px;">
-            <p class="text-body-lg"
-              style="font-size:0.9375rem; color:var(--text-primary); font-weight:600; margin-bottom:6px;">Reduced
-              Operational Risk</p>
-            <p class="text-body-lg" style="font-size:0.875rem;">Systematic checks prevent unexpected failures that
-              disrupt operations and morale.</p>
+
+        <!-- Trash Removal -->
+        <div class="janitorial-card">
+          <div class="card-circle">
+            <img src="assets/2150576468.jpg" alt="Trash Removal and Recycling">
           </div>
-          <div style="border-left:2px solid var(--border-heavy); padding-left:24px;">
-            <p class="text-body-lg"
-              style="font-size:0.9375rem; color:var(--text-primary); font-weight:600; margin-bottom:6px;">Extended Asset
-              Lifespan</p>
-            <p class="text-body-lg" style="font-size:0.875rem;">Regular servicing of HVAC, plumbing, and electrical
-              systems extends useful life significantly.</p>
+          <h3>Trash Removal &amp; Recycling</h3>
+          <ul>
+            <li>Emptying trash bins and recycling containers</li>
+            <li>Sorting recyclables for proper disposal</li>
+            <li>Ensuring compliance with local regulations</li>
+          </ul>
+        </div>
+
+        <!-- Surface Cleaning -->
+        <div class="janitorial-card">
+          <div class="card-circle">
+            <img src="https://beyond3k.com/wp-content/uploads/2025/11/2147735046-768x768.jpg" alt="Surface Cleaning">
           </div>
-          <div style="border-left:2px solid var(--border-heavy); padding-left:24px;">
-            <p class="text-body-lg"
-              style="font-size:0.9375rem; color:var(--text-primary); font-weight:600; margin-bottom:6px;">Compliance
-              &amp; Safety</p>
-            <p class="text-body-lg" style="font-size:0.875rem;">Maintain code compliance and a safe environment for all
-              occupants and personnel.</p>
+          <h3>Surface Sanitization</h3>
+          <ul>
+            <li>Wiping down countertops, desks, and tables</li>
+            <li>Disinfecting high-touch door handles &amp; switches</li>
+            <li>Sanitizing elevator buttons and shared areas</li>
+          </ul>
+        </div>
+
+        <!-- Window Cleaning -->
+        <div class="janitorial-card">
+          <div class="card-circle">
+            <img src="https://beyond3k.com/wp-content/uploads/2025/11/15175-768x512.jpg" alt="Window Cleaning">
           </div>
+          <h3>Window &amp; Glass Care</h3>
+          <ul>
+            <li>Cleaning windows, glass doors, and partitions</li>
+            <li>Removing smudges and streaks for clarity</li>
+            <li>Interior and exterior glass maintenance</li>
+          </ul>
+        </div>
+
+        <!-- Restocking Supplies -->
+        <div class="janitorial-card">
+          <div class="card-circle">
+            <img src="assets/restocking_supplies.png" alt="Restocking Supplies">
+          </div>
+          <h3>Restocking Supplies</h3>
+          <ul>
+            <li>Refilling soap and paper towel dispensers</li>
+            <li>Replenishing toilet paper and restroom essentials</li>
+            <li>Monitoring and managing inventory levels</li>
+          </ul>
+        </div>
+
+        <!-- Specialized Cleaning -->
+        <div class="janitorial-card">
+          <div class="card-circle">
+            <img src="https://beyond3k.com/wp-content/uploads/2025/11/still-life-cleaning-tools-scaled.jpg"
+              alt="Specialized Cleaning">
+          </div>
+          <h3>Specialized Tasks</h3>
+          <ul>
+            <li>Professional carpet cleaning and shampooing</li>
+            <li>Floor stripping, waxing, and buffing</li>
+            <li>Custom periodic deep-cleaning solutions</li>
+          </ul>
         </div>
       </div>
     </div>
