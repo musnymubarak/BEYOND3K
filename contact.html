@@ -116,12 +116,21 @@
           </div>
           <div>
             <label class="form-ed-label" for="cf-service">Service Required</label>
-            <select id="cf-service" class="form-ed-input" style="appearance:none; cursor:pointer;">
-              <option value="">Select a service</option>
-              <option value="general">General Construction</option>
-              <option value="facility">Facility Maintenance</option>
-              <option value="other">Other</option>
-            </select>
+            <div class="custom-select" id="service-select">
+              <div class="custom-select-trigger">
+                <span>Select a service</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <div class="custom-options">
+                <div class="custom-option" data-value="">Select a service</div>
+                <div class="custom-option" data-value="general">General Construction</div>
+                <div class="custom-option" data-value="facility">Facility Maintenance</div>
+                <div class="custom-option" data-value="other">Other</div>
+              </div>
+              <input type="hidden" name="service" id="cf-service" value="">
+            </div>
           </div>
         </div>
 

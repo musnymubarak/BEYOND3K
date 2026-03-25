@@ -56,5 +56,37 @@ document.addEventListener('DOMContentLoaded', () => {
   }, observerOptions);
 
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  
+  
+  // --- CUSTOM SELECTS ---
+  document.querySelectorAll('.custom-select').forEach(select => {
+    const trigger = select.querySelector('.custom-select-trigger');
+    const options = select.querySelectorAll('.custom-option');
+    const hiddenInput = select.querySelector('input[type="hidden"]');
+    const triggerSpan = trigger.querySelector('span');
+
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      // Close other open selects
+      document.querySelectorAll('.custom-select').forEach(other => {
+        if (other !== select) other.classList.remove('open');
+      });
+      select.classList.toggle('open');
+    });
+
+    options.forEach(option => {
+      option.addEventListener('click', () => {
+        triggerSpan.textContent = option.textContent;
+        hiddenInput.value = option.dataset.value;
+        options.forEach(opt => opt.classList.remove('selected'));
+        option.classList.add('selected');
+        select.classList.remove('open');
+      });
+    });
+  });
+
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.custom-select').forEach(select => select.classList.remove('open'));
+  });
 
 });
