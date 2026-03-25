@@ -661,6 +661,22 @@ h4 {
   align-items: center;
 }
 
+.footer-bottom a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.footer-bottom a:hover {
+  color: #ffffff;
+  background: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--accent-soft);
+}
+
 /* =============================================================
    FORMS
    ============================================================= */
